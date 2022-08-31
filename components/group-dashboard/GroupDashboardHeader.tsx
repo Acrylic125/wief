@@ -12,9 +12,11 @@ export type GroupDashboardHeaderProps = GroupDashboardHeaderBaseProps & StylingP
 
 export default function GroupDashboardHeader({ groupName, onRequestShare, style, className }: GroupDashboardHeaderProps) {
   return (
-    <header style={style} className={cx("flex flex-row justify-between", className)}>
-      <h1 className="text-2xl font-bold">{groupName}</h1>
-      <Button onClick={onRequestShare}>Share</Button>
+    <header style={style} className={cx("flex flex-row items-center justify-between", className)}>
+      <h1 className="text-4xl font-bold">{groupName}</h1>
+      <Button size="md" onClick={onRequestShare}>
+        Share
+      </Button>
     </header>
   );
 }
