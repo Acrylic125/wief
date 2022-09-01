@@ -18,6 +18,8 @@ export type ChildrenProps = {
 
 export type Size = "xs" | "sm" | "md" | "lg" | "xl";
 
+export type ID = string | number;
+
 export type StylingProps = StyleProps & ClassnameProps;
 export type PublicPath = string;
 export type NextImageSrc = ImageProps["src"];
