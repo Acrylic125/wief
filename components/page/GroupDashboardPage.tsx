@@ -9,7 +9,7 @@ export type GroupDashboardProps = GroupDashboardPageBaseProps & ChildrenProps;
 
 export default function GroupDashboardPage({ children }: GroupDashboardProps) {
   return (
-    <Page className="flex flex-col items-center">
+    <Page className="flex flex-col items-center px-4">
       <div className="flex flex-col w-full max-w-10xl">
         <Separator size="xl" />
         <GroupDashboardBase groupName="Group B">{children}</GroupDashboardBase>
