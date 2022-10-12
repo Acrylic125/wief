@@ -5,12 +5,9 @@ module.exports = {
     themes: [
       "night",
       {
-        mytheme: {
-          primary: "#a991f7",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
-          neutral: "#3d4451",
-          "base-100": "#ffffff",
+        night: {
+          ...require("daisyui/src/colors/themes")["[data-theme=night]"],
+          neutral: "#3C5277",
         },
       },
     ],
