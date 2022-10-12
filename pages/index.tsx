@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import EditableTimeline from "../components/chart/EditableTimeline";
 import TimelineChart from "../components/chart/TimelineChart";
 
 const ChartNoSSR = dynamic(() => import("react-apexcharts"), { ssr: false });
@@ -30,7 +31,7 @@ const Home: NextPage = () => {
       // tickAmount: 1,
       type: "datetime",
       axisTicks: {
-        show: false,
+        // show: false,
       },
       axisBorder: {
         show: false,
@@ -87,9 +88,19 @@ const Home: NextPage = () => {
       <div className="w-3/4 max-h-72 overflow-y-auto">
         <ChartNoSSR options={options} series={series} type="rangeBar" height="100%" />
       </div>
-      <div className="w-3/4">
+      <EditableTimeline />
+      {/* <div className="w-3/4">
         <TimelineChart />
-      </div>
+      </div> */}
+      {/* <EditableTimeline /> */}
+      {/* <svg>
+        <rect x="100" y="0" width="100" height="100" className="fill-primary" />
+      </svg> */}
+      {/* <svg width="80%" height={400}>
+        <g transform="translate(100, 100)">
+          <rect x={120} y={25} width="90%" height={100} className="fill-primary" />
+        </g>
+      </svg> */}
     </div>
   );
 };
